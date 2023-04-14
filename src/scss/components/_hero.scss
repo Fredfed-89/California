@@ -1,0 +1,153 @@
+.hero {
+  margin-bottom: 56px;
+
+  @include mobile-m {
+    margin-bottom: 25px;
+  }
+
+  &__slide-item {
+    border-radius: 32px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-main-slide);
+
+    &--center {
+      background-color: aquamarine;
+    }
+
+    &--right {
+      background-color: darkorange;
+    }
+
+    @include macbook {
+      // flex-wrap: wrap-reverse;
+      // justify-content: center;
+    }
+
+    @include mobile-l {
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+  }
+
+  &__left-side {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-top: 145px;
+    padding-bottom: 127px;
+    padding-left: 55px;
+
+
+    @include desktop {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+
+    @include macbook {
+      padding-top: 25px;
+      padding-bottom: 40px;
+      padding-left: 15px;
+    }
+
+    @include mobile-m {
+      padding-top: 15px;
+      padding-right: 15px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    max-width: 590px;
+    width: 100%;
+    font-family: 'ReadexPro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 1.2;
+
+    @include mid-desktop {
+      // font-size: 48px;
+      font-size: 38px;
+    }
+
+    @include mobile-l {
+      font-size: 42px;
+    }
+
+    @include mobile-m {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+    max-width: 565px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.2;
+
+    @include mobile-m {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__btn-inner {
+    display: block;
+  }
+
+  &__btn-link {
+    border: 1px solid var(--color-black);
+    border-radius: 200px;
+    display: inline;
+    padding-top: 14px;
+    padding-right: 53px;
+    padding-bottom: 14px;
+    padding-left: 53px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--color-black);
+    transition: color 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-black);
+    }
+
+    @include mobile-m {
+      font-size: 16px;
+      padding-top: 10px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+      padding-left: 30px;
+    }
+  }
+
+  &__right-side {
+    // display: block;
+    max-width: 645px;
+    width: 100%;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    // max-width: 647px;
+    // width: 100%;
+
+    @include macbook {
+      max-width: 647px;
+      width: 100%;
+      max-height: 550px;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,254 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  font-family: var(--font-family, sans-serif);
+  position: relative;
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  min-width: 320px;
+  min-height: 100%;
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.site-container {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.is-hidden {
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-family: 'ReadexPro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.25;
+  text-align: center;
+
+  @include mobile-m {
+    font-size: 32px;
+  }
+}
+
+.text {
+  font-family: 'ReadexPro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.swiper {
+  position: relative;
+  width: 1300px;
+  height: 100%;
+
+  @include big-desktop {
+    max-width: 1300px;
+    width: 100%;
+  }
+
+  // @include macbook {
+  //   max-width: 1300px;
+  //   width: 100%;
+  // }
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.slider-pagination {
+  max-width: 670px;
+  width: 100%;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 32px;
+
+  @include big-desktop {
+    // bottom: 59px;
+  }
+
+  @include macbook {
+    bottom: 10px;
+  }
+
+  // @include mobile-l {
+  //   max-width: 600px;
+  //   width: 100%;
+  // }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  border-radius: 0px;
+  width: 194px;
+  height: 2px;
+  opacity: 1;
+
+  &:not(:last-child) {
+    margin-right: 34px;
+
+    @include mobile-l {
+      margin-right: 10px;
+    }
+  }
+
+  @include macbook {
+    width: 80px;
+  }
+
+  @include mobile-l {
+    width: 50px;
+  }
+
+  @include mobile-m {
+    display: none;
+  }
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--color-pagination);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 14px;
+  height: 26px;
+
+  &--left {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    background-image: url("../img/hero-arrow-left.svg");
+
+    // @include mob-l {
+    // }
+
+    @include mobile-m {
+      top: 45%;
+    }
+  }
+
+  &--right {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    background-image: url("../img/hero-arrow-right.svg");
+
+    // @include desktop {
+    // }
+
+    @include mobile-m {
+      top: 45%;
+    }
+  }
+}

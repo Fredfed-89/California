@@ -1,0 +1,143 @@
+.ideas {
+  padding-top: 47px;
+  padding-bottom: 25px;
+
+  @include mobile-l {
+    padding-top: 0;
+  }
+
+  @include mobile-m {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 56px;
+
+    @include mobile-l {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    margin-bottom: 75px;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include mobile-l {
+      margin-bottom: 25px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__image {
+    max-width: 620px;
+    width: 100%;
+    max-height: 420px;
+    height: 100%;
+    margin-right: 40px;
+
+    @include tablet {
+      margin-right: 0;
+    }
+
+    @include mobile-l {
+      object-fit: contain;
+    }
+  }
+
+  &__paragraphs {
+    padding-top: 15px;
+    max-width: 640px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 600px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 23px;
+
+      @include mobile-s {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.25;
+
+    @include mobile-m {
+      font-size: 18px;
+    }
+
+    @include mobile-s {
+      font-size: 16px;
+    }
+  }
+
+  &__link-inner {
+    margin: 0 auto;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__more-link {
+    position: relative;
+    display: inline-block;
+    padding-right: 25px;
+    font-size: 24px;
+    text-transform: capitalize;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 28px;
+      background-image: url('../img/ideas-arrow-icon.svg');
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2%;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-black);
+      transition: width .3s ease-out;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    @include mobile-m {
+      font-size: 22px;
+    }
+
+    @include mobile-s {
+      font-size: 20px;
+
+    }
+  }
+}

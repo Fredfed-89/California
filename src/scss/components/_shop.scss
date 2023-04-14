@@ -1,0 +1,255 @@
+.shop {
+  margin-bottom: 82px;
+
+  @include mobile-m {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include mobile-m {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    font-family: 'ReadexPro', sans-serif;
+    margin: 0 auto;
+    margin-bottom: 55px;
+    max-width: 630px;
+    width: 100%;
+
+    @include mobile-m {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__cards-inner {
+    display: grid;
+    // grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    @include desktop {
+      // margin: 0 auto;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 13px;
+    }
+  }
+
+  &__cards-left {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__left-item {
+    margin-bottom: 72px;
+    padding-right: 42px;
+    padding-left: 42px;
+    background-color: var(--color-white);
+    filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
+
+    &--laptops {
+      @include desktop {
+        display: block;
+        margin-bottom: 265px;
+      }
+
+      @include mobile-m {
+        padding-bottom: 5px;
+      }
+    }
+
+    &--bottom {
+      position: absolute;
+      margin: 0;
+      bottom: -22px;
+    }
+
+    @include desktop {
+      max-width: 634px;
+      width: 100%;
+    }
+
+    @include mobile-m {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__left-top-link {
+    display: inline-block;
+    text-align: end;
+  }
+
+  &__left-top-image {
+    margin-right: 55px;
+    max-width: 500px;
+    width: 100%;
+
+    @include mobile-m {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__left-top-text-inner {
+    margin-left: auto;
+    max-width: 192px;
+    width: 100%;
+
+    @include mobile-m {
+      margin: 0 auto;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  &__left-bottom-link {
+    position: relative;
+    display: flex;
+    text-align: end;
+  }
+
+  &__left-bottom-subtitle {}
+
+  &__left-bottom-text-inner {
+    padding-top: 87px;
+    padding-bottom: 87px;
+
+    @include mobile-l {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    @include mobile-m {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__cards-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+
+    @include desktop {
+      object-fit: contain;
+      order: -1;
+    }
+
+    @include mobile-m {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    // display: grid;
+    // grid-template-columns: 50% 50%;
+    // margin: 0 auto;
+    // gap: 13px;
+
+    // @include macbook {
+    //   margin-bottom: 12px;
+    //   order: -1;
+    // }
+  }
+
+  &__right-left-image {
+    margin-bottom: 42px;
+    padding-left: 15px;
+    max-width: 405px;
+    width: 100%;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__right-left-image-full {
+    display: none;
+
+    @include desktop {
+      display: block;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+
+    @include mobile-m {
+      margin-bottom: 0;
+    }
+  }
+
+  &__right-left-text-inner {
+    margin: 0 auto;
+    max-width: 250px;
+    width: 100%;
+
+    @include mobile-m {
+      text-align: center;
+    }
+  }
+
+  &__right-item {
+    padding-top: 112px;
+    padding-bottom: 113px;
+    background-color: var(--color-white);
+    filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
+
+    @include desktop {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      object-fit: contain;
+    }
+
+    @include mobile-m {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__right-right-text-inner {
+    margin: 0 auto;
+    margin-bottom: 42px;
+    max-width: 233px;
+    width: 100%;
+
+    @include desktop {
+      margin-bottom: 15px;
+    }
+
+    @include mobile-l {
+      margin-bottom: 10px;
+    }
+
+    @include mobile-m {
+      // margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  &__right-right-image {
+    @include desktop {
+      object-fit: contain;
+    }
+  }
+}
+
+.card-text {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.card-subtitle {
+  font-family: 'ReadexPro', sans-serif;
+  margin: 0;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+
+  @include mobile-m {
+    font-size: 22px;
+  }
+}

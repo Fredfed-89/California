@@ -1,0 +1,23 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Inter", sans-serif;
+  --content-width: 1300px;
+  --container-offset: 70px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  @media (max-width: (1200px)) {
+    --container-offset: 15px;
+  }
+
+  // colors
+  --color-white: #fff;
+  --color-black: #000;
+  --color-main-slide: #dce5e2;
+  --color-pagination: #1d5de4;
+  --color-text-descr: #4b4b4b;
+  --color-bg-item: #f8f9fa;
+  --color-input: #c5c5c5;
+  --color-bg-never: #dce5e2;
+}

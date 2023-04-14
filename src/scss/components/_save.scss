@@ -1,0 +1,104 @@
+.save {
+  @include mobile-m {
+    padding-top: 15px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+
+    @include mobile-m {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+
+    @include mobile-s {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-l {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    max-width: 302px;
+    width: 100%;
+
+    @include desktop {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-image {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 33px;
+    max-width: 247px;
+    width: 100%;
+
+    @include mobile-s {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-link {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-black);
+      transition: width .3s ease-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__item-title {
+    font-family: 'ReadexPro', sans-serif;
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  &__item-text {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: var(--color-text-descr);
+  }
+
+  &__item-price {
+    font-size: 18px;
+  }
+}
